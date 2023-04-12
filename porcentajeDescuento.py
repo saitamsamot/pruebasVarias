@@ -2,6 +2,16 @@ import requests
 from bs4 import BeautifulSoup
 import asyncio
 import telegram
+
+try:
+    import telegram
+except ImportError:
+    print("La biblioteca de telegram no está instalada en Fastcron.")
+
+try:
+    import asyncio
+except ImportError:
+    print("La biblioteca de asyncio no está instalada en Fastcron.")
 # Replace "YOUR_BOT_TOKEN" with your bot token received from BotFather
 TOKEN = "6263545478:AAHyfj5peNRfyc9yITcAGPnvE6a4GLkdknw"
 
